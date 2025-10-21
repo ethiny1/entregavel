@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrega do Produto</title>
+
+  <!-- Pixel do Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1525388995293298'); 
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin: 50px;">
+
+  <h1>🎉 Obrigado pela sua compra!</h1>
+  <p>Seu conteúdo já está disponível. Clique no botão abaixo para acessar:</p>
+
+  <button id="btnDrive" 
+          style="padding: 15px 30px; font-size: 18px; background: #ff0000; color: #fff; border: none; border-radius: 8px; cursor: pointer;">
+    📥 Acessar Produto
+  </button>
+
+  <p style="margin-top: 30px; font-size: 14px; color: #555;">
+    *Ao clicar no botão, você será redirecionado para o Google Drive.
+  </p>
+
+  <script>
+    // Alterar o link do produto aqui
+    const linkDrive = "https://drive.google.com/drive/folders/1Nd_ZXohpoI-xyza2Qz60-oBZUxsBz9qa";
+
+    document.getElementById('btnDrive').addEventListener('click', function() {
+      // Evento personalizado do Pixel
+      fbq('trackCustom', 'CliqueDrive');
+      // Redirecionar para o Drive
+      window.open(linkDrive, "_blank");
+    });
+  </script>
+</body>
+</html>
