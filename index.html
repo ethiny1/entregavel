@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entrega do Produto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria Carolina</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: #fff;
+      color: #333;
+      height: 100vh;
+      text-align: center;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0.2rem 0;
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #666;
+      max-width: 300px;
+    }
+  </style>
 
-  <!-- Pixel do Facebook -->
+  <!-- Pixel Meta Ads -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1525388995293298'); 
-    fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function() {
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1525388995293298'); // substitua SEU_PIXEL_ID pelo seu ID real
+    fbq('track', 'Purchase', {value: 10.00, currency: 'BRL'});
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://drive.google.com/drive/folders/1Nd_ZXohpoI-xyza2Qz60-oBZUxsBz9qa?usp=sharing";
+    }, 5000);
   </script>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; margin: 50px;">
-
-  <h1>🎉 Obrigado pela sua compra!</h1>
-  <p>Seu conteúdo já está disponível. Clique no botão abaixo para acessar:</p>
-
-  <button id="btnDrive" 
-          style="padding: 15px 30px; font-size: 18px; background: #ff0000; color: #fff; border: none; border-radius: 8px; cursor: pointer;">
-    📥 Acessar Produto
-  </button>
-
-  <p style="margin-top: 30px; font-size: 14px; color: #555;">
-    *Ao clicar no botão, você será redirecionado para o Google Drive.
-  </p>
-
-  <script>
-    // Alterar o link do produto aqui
-    const linkDrive = "https://drive.google.com/drive/folders/1Nd_ZXohpoI-xyza2Qz60-oBZUxsBz9qa";
-
-    document.getElementById('btnDrive').addEventListener('click', function() {
-      // Evento personalizado do Pixel
-      fbq('trackCustom', 'CliqueDrive');
-      // Redirecionar para o Drive
-      window.open(linkDrive, "_blank");
-    });
-  </script>
+<body>
+  <img src="http://s3-cf.zapsafe.work/ethiny/perfil.jpg" alt="Foto de Maria Carolina">
+  <h1>Maria Carolina</h1>
+  <p>Liberando agora os meus conteúdos para você amor...</p>
 </body>
 </html>
